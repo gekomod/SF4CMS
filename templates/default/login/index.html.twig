@@ -38,8 +38,13 @@
                                     <input type="submit" class="btn btn-primary btn-lg btn-block" value="Zaloguj Mnie">
                                     <p class="forget-pass">Zapomniałeś login lub hasło, <a href="{{ path("forgot") }}">wejdź tu</a>.</p>
                                 </div>
-                                <div class="col-lg-12">
-                                    <a href="#" class="btn btn-lg btn-block btn-social facebook"><i class="icon-facebook"></i> Login with Facebook</a>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <a href="{{ path('facebook_login') }}" class="btn btn-lg btn-block btn-social facebook"><i class="icon-facebook"></i> Login with Facebook</a>
+                                </div>
+                                <div class="col-lg-6">
+                                    <a href="#" class="btn btn-lg btn-block btn-social gplus"><i class="icon-google"></i> Login with Google</a>
                                 </div>
                             </div>
                         </form>
