@@ -1,0 +1,184 @@
+<main class="single single-knowledgebase">
+<div class="search-section">
+        <div class="masthead single-masthead">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-md-auto">
+                        <form>
+                            <input type="text" class="search-field" placeholder="Search Something ... ">
+                            <button type="submit"><i class="icon icon-search"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <div class="container">
+            <ol>
+                <li><a href="/">Strona Główna</a>
+                </li>
+                <li class="active">{{ wpis.title }}</li>
+            </ol>
+        </div>
+    </div>
+    <!-- Main Content -->
+    <div class="content-wrapper">
+        <div class="container">
+            <div class="col-lg-10 mx-md-auto ">
+                <article class="post">
+                    <h1>{{ wpis.title  }}</h1>
+                    <ul class="meta">
+                        <li><span>Utworzono :</span> {{ wpis.createdat|date('Y-m-d H:i:s') }}</li>
+                        <li><span>Aktualizacja:</span> {{ wpis.updatedat|date('Y-m-d H:i:s') }}</li>
+                    </ul>
+<p>{{ wpis.body  }}</p>
+<p>{{ wpis.description }}</p>
+                </article>
+            </div>
+        </div>
+        <div class="feedback">
+            <div class="container">
+                <div class="col-lg-8 mx-md-auto">
+                    <p><span class="count">250 people found this article helpful what about you?</span>
+                        <a
+                                class="feedback-btn" href="#"><span class="icon-yes"></span>
+                        </a> <a class="feedback-btn" href="#"><span class="icon-not"></span></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="post-comments">
+            <div class="container">
+                <div class="col-xl-8 mx-lg-auto">
+                    <form>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-lg" placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-lg" placeholder="Subject">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-lg" placeholder="Website">
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <textarea class="form-control-lg" placeholder="Message"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <input type="submit" class="btn btn-primary btn-lg" value="Post Comment">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="col-xl-8 mx-lg-auto">
+                <div class="comments">
+                    <ol class="comment-list">
+                        <li id="comment-1" class="comment"><a class="float-left" href="#">
+                            <img class="avatar" src="assets/img/dummy/u4.png" alt=""> </a>
+                            <div
+                                    class="media-body description">
+                                <p>The Internet tend to repeat predefined chunks as necessary, making this
+                                    the first true generator on the Interne making this the first true generator
+                                    on the Interne</p>
+                            </div>
+                            <ul class="comments-meta">
+                                <li><a class="url" rel="external nofollow" href="#">John Doe</a>
+                                </li>
+                                <li><a href="#">
+                                    <time datetime="2013-03-14T11:30:33+00:00">March 14</time>
+                                </a>
+                                </li>
+                                <li class="reply"><a href="#" class="comment-reply-link" rel="nofollow">Reply</a>
+                                </li>
+                            </ul>
+                            <!--/.media-body -->
+                        </li>
+                        <!-- #comment-## -->
+                        <li id="comment-2" class="comment"><a class="float-left" href="#">
+                            <img class="avatar" src="assets/img/dummy/u2.png" alt="">
+                        </a>
+                            <div class="media-body description">
+                                <p>The Internet tend to repeat predefined chunks as necessary, making this
+                                    the first true generator on the Interne making this the first true generator
+                                    on the Interne</p>
+                            </div>
+                            <ul class="comments-meta">
+                                <li><a class="url" rel="external nofollow" href="#">John Doe</a>
+                                </li>
+                                <li><a href="#">
+                                    <time datetime="2013-03-14T11:30:33+00:00">March 14</time>
+                                </a>
+                                </li>
+                                <li class="reply"><a href="#" class="comment-reply-link" rel="nofollow">Reply</a>
+                                </li>
+                            </ul>
+                            <!--/.media-body -->
+                        </li>
+                        <!-- #comment-## -->
+                        <li id="comment-3" class="comment"><a class="float-left" href="#">
+                            <img class="avatar" src="assets/img/dummy/u3.png" alt="">
+                        </a>
+                            <div class="media-body description">
+                                <p>The Internet tend to repeat predefined chunks as necessary, making this
+                                    the first true generator on the Interne making this the first true generator
+                                    on the Interne</p>
+                            </div>
+                            <ul class="comments-meta">
+                                <li><a class="url" rel="external nofollow" href="#">John Doe</a>
+                                </li>
+                                <li><a href="#">
+                                    <time datetime="2013-03-14T11:30:33+00:00">March 14</time>
+                                </a>
+                                </li>
+                                <li class="reply"><a href="#" class="comment-reply-link" rel="nofollow">Reply</a>
+                                </li>
+                            </ul>
+                            <!--/.media-body -->
+                        </li>
+                        <!-- #comment-## -->
+                        <li id="comment-4" class="comment"><a class="float-left" href="#">
+                            <img class="avatar" src="assets/img/dummy/u4.png" alt="">
+                        </a>
+                            <div class="media-body description">
+                                <p>The Internet tend to repeat predefined chunks as necessary, making this
+                                    the first true generator on the Interne making this the first true generator
+                                    on the Interne</p>
+                            </div>
+                            <ul class="comments-meta">
+                                <li><a class="url" rel="external nofollow" href="#">John Doe</a>
+                                </li>
+                                <li><a href="#">
+                                    <time datetime="2013-03-14T11:30:33+00:00">March 14</time>
+                                </a>
+                                </li>
+                                <li class="reply"><a href="#" class="comment-reply-link" rel="nofollow">Reply</a>
+                                </li>
+                            </ul>
+                            <!--/.media-body -->
+                        </li>
+                        <!-- #comment-## -->
+                    </ol>
+                    <!-- .comment-list -->
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

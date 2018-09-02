@@ -1,0 +1,55 @@
+<?php
+
+namespace App\Repository;
+
+use App\Entity\Menu;
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Symfony\Bridge\Doctrine\RegistryInterface;
+
+/**
+ * @method Menu|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Menu|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Menu[]    findAll()
+ */
+class MenuRepository extends ServiceEntityRepository
+{
+    public function __construct(RegistryInterface $registry)
+    {
+        parent::__construct($registry, Menu::class);
+    }
+
+
+ public function getMainMenu()
+    {
+        return $this->findBy(array('menuTypeId' => 1));
+    }
+
+//    /**
+//     * @return Menu[] Returns an array of Menu objects
+//     */
+    /*
+    public function findByExampleField($value)
+    {
+        return $this->createQueryBuilder('m')
+            ->andWhere('m.exampleField = :val')
+            ->setParameter('val', $value)
+            ->orderBy('m.id', 'ASC')
+            ->setMaxResults(10)
+            ->getQuery()
+            ->getResult()
+        ;
+    }
+    */
+
+    /*
+    public function findOneBySomeField($value): ?Menu
+    {
+        return $this->createQueryBuilder('m')
+            ->andWhere('m.exampleField = :val')
+            ->setParameter('val', $value)
+            ->getQuery()
+            ->getOneOrNullResult()
+        ;
+    }
+    */
+}

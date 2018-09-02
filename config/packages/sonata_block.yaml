@@ -1,0 +1,87 @@
+sonata_block:
+    context_manager: sonata.page.block.context_manager
+    default_contexts: [sonata_page_bundle]
+
+    http_cache:
+        listener: true
+    profiler:
+        enabled:        "%kernel.debug%"
+        template:       "@SonataBlock/Profiler/block.html.twig"
+        container_types: ~
+    blocks:
+        sonata.admin.block.stats:
+            contexts:   [admin]
+        sonata.admin.block.admin_list:
+            contexts:   [admin]
+        sonata.admin.block.search_result:
+            contexts:   [admin]
+
+        #sonata.admin_doctrine_orm.block.audit:
+        #    contexts:   [admin]
+
+        sonata.block.service.text:
+        sonata.block.service.container:
+        sonata.block.service.rss:
+        sonata.block.service.action:
+
+        # PageBundle's Blocks
+        sonata.page.block.container: ~
+        sonata.page.block.children_pages:
+        sonata.page.block.breadcrumb:
+
+        # MediaBundle's Blocks
+        sonata.media.block.media:
+        sonata.media.block.gallery:
+        sonata.media.block.feature_media:
+
+        sonata.block.service.menu:
+        sonata.block.service.template:
+        sonata.block.service.blog:
+        sonata.page.block.service.blog:
+
+        # UserBundle's Blocks
+        sonata.user.block.account:
+            cache: sonata.page.cache.js_async
+            #cache: sonata.page.cache.esi
+            contexts: [user]
+        sonata.user.block.menu:
+            contexts: [user]
+
+# SeoBundle's Blocks
+        sonata.seo.block.email.share_button:
+        sonata.seo.block.facebook.like_box:
+        sonata.seo.block.facebook.like_button:
+        sonata.seo.block.facebook.send_button:
+        sonata.seo.block.facebook.share_button:
+        sonata.seo.block.pinterest.pin_button:
+        sonata.seo.block.twitter.share_button:
+        sonata.seo.block.twitter.follow_button:
+        sonata.seo.block.twitter.hashtag_button:
+        sonata.seo.block.twitter.mention_button:
+        sonata.seo.block.twitter.embed:
+        sonata.block.service.post:
+
+        # Some block with different templates
+        #acme.demo.block.demo:
+        #    templates:
+        #       - { name: 'Simple', template: '@AcmeDemo/Block/demo_simple.html.twig' }
+        #       - { name: 'Big',    template: '@AcmeDemo/Block/demo_big.html.twig' }
+
+        # Formatter
+        sonata.formatter.block.formatter:
+
+        sonata.seo.block.breadcrumb.homepage:
+
+    exception:
+        default:
+            renderer:               throw
+            filter:                 keep_all
+        renderers:
+            inline:                 sonata.block.exception.renderer.inline
+            inline_debug:           sonata.block.exception.renderer.inline_debug
+            throw:                  sonata.block.exception.renderer.throw
+        filters:
+            debug_only:             sonata.block.exception.filter.debug_only
+            ignore_block_exception: sonata.block.exception.filter.ignore_block_exception
+            keep_all:               sonata.block.exception.filter.keep_all
+            keep_none:              sonata.block.exception.filter.keep_none

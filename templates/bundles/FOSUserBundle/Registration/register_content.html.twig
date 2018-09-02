@@ -1,0 +1,68 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<div class="light b-t">
+    <div id="primary" class="content-area"
+         data-bg-possition="center"
+         data-bg-repeat="false"
+         style="background: url('/bundles/assets/img/icon/icon-circles.png');">
+        <main id="main" class="site-main">
+            <div class="container">
+                <div class="col-xl-8 mx-lg-auto p-t-b-80">
+                    <header class="text-center">
+                        <h1>Tworzenie Nowego Kontat</h1>
+                        <p>Dołącz do naszej strony</p>
+                        <img class="p-t-b-50" src="/bundles/assets/img/icon/icon-join.png" alt="">
+                    </header>
+                    {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
+                    <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    {{ form_widget(form.username, { 'attr': {'class': 'form-control form-control-lg', 'placeholder':'Nazwa Użytkownika'} }) }}
+                                    {% for errorItem in form.username.vars.errors %}
+                                    <span class="help-inline">{{ errorItem.message }}</span>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <input type="text" name="_username" class="form-control form-control-lg" placeholder="Nick">
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    {{ form_widget(form.email, { 'attr': {'class': 'form-control form-control-lg', 'placeholder':'E-mail'} }) }}
+                                    {% for errorItem in form.email.vars.errors %}
+                                    <span class="help-inline">{{ errorItem.message }}</span>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    {{ form_widget(form.plainPassword.first, { 'attr': {'class': 'form-form-control form-control-lg', 'placeholder':'Hasło'} }) }}
+                                    {% for errorItem in form.plainPassword.first.vars.errors %}
+                                    <span class="help-inline">{{ errorItem.message }}</span>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    {{ form_widget(form.plainPassword.second, { 'attr': {'class': 'form-control form-control-lg', 'placeholder':'Powtórz Hasło'} }) }}
+                                    {% for errorItem in form.plainPassword.second.vars.errors %}
+                                    <span class="help-inline">{{ errorItem.message }}</span>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <input type="submit" class="btn btn-primary btn-lg btn-block" value="Załóż Konto">
+                                <p class="forget-pass">Dostaniesz E-mail z potwierdzeniem założenia konta</p>
+                            </div>
+                        </div>
+    {{ form_rest(form) }}
+{{ form_end(form) }}
+                </div>
+            </div>
+        </main>
+        <!-- #main -->
+    </div>
+    <!-- #primary -->
+</div>

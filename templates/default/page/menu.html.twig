@@ -1,0 +1,19 @@
+<nav class="mainnav navbar navbar-default justify-content-between">
+    <div class="container relative">
+        <a class="offcanvas dl-trigger paper-nav-toggle" data-toggle="offcanvas"
+           aria-expanded="false" aria-label="Toggle navigation">
+            <i></i>
+        </a>
+        <a class="navbar-brand" href="/">
+            <img class="d-inline-block align-top" alt="" src="/bundles/assets/img/basic/logo.png">
+        </a>
+        <div class="paper_menu">
+            <div id="dl-menu" class="xv-menuwrapper responsive-menu">
+{% set menu = knp_menu_get('main', [], {id_kategori: 1,'currentClass': 'active','lastClass':false}) %}
+
+{{ knp_menu_render(menu, {'currentClass': 'active', 'allow_safe_labels': true}) | raw }}
+</div>
+<!-- Login modal -->
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,10 @@
+{% extends '@SonataAdmin/standard_layout.html.twig' %}
+
+{% block sonata_admin_content %}
+<h1>{{ name|replace({',':'/'}) }}</h1>
+
+<pre>
+{{ output }}
+</pre>
+
+{% endblock %}

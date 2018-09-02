@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<main>
+    <!-- Search Section -->
+    <section class="search-section home-search">
+        <div class="masthead text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-md-auto">
+                        <h1>Knowledgebase</h1>
+                        <p class="lead text-muted">Sed eget orci eleifend enim mattis suscipit. Suspendisse potenti non
+                            ipsum.</p>
+                        <form>
+                            <input type="text" class="search-field" placeholder="Search Something ... ">
+                            <button type="submit"><i class="icon icon-search"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Topics -->
+    <section class="topics">
+        <div class="container">
+            <div class="row">
+                
+                {% if info == null %}
+                  <div class="col-xl-12 col-md-12">
+                    <div class="alert alert-danger" role="alert">
+                      {{ error }}
+                    </div>
+                  </div>
+                {% else %}
+                    {% for inf in info %}
+                        <div class="col-xl-4 col-md-6">
+                    <div class="topics-wrapper border-style">
+                        <h3><a href="/faq/{{ inf.slug|e }}"><span class="icon icon-circle-o text-blue"></span>{{ inf.title|e }}</a></h3>
+                        <ul class="topics-list">
+                            <li>{{ inf.body|e }}</li>
+                            <li>{{ inf.description|e }}</li>
+                        </ul>
+                        <ul class="topics-meta">
+                            <li>15 Topics</li>
+                            <li>{{ inf.slug|e }}</li>
+                        </ul>
+                    </div>
+                </div>
+                    {% endfor %}
+                {% endif %}               
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% block content_top %}
+
+        {% if is_granted("ROLE_USER") %}
+            {% set mainMenu = [
+                {'path': 'fos_user_profile_show',   'name': 'Twój Profil' },
+		{'path': 'fos_user_profile_edit', 'name': 'Edycja Profilu'},
+		{'path': 'fos_user_change_password', 'name': 'Zmiana Hasla'},
+                {'path': 'fos_user_security_logout','name': 'Wyloguj'}
+            ] %}          
+        {% else %}
+            {% set mainMenu = [
+                {'path': 'main',          'name': 'Home' },
+                {'path': 'fos_user_security_login',         'name': 'Login' },
+                {'path': 'fos_user_registration_register',  'name': 'Register' }
+            ] %}          
+        {% endif %}
+{% if is_granted("ROLE_USER") %}
+<nav class="navbar navbar-expand-lg">
+<div class="container">
+
+<ul class="nav nav-tabs mb-12 col-md-12 nav-material">
+        {% for item in mainMenu %}
+          <li class="nav-item">
+            <a class="nav-link{{ app.request.get('_route') == item['path'] ? ' active' : '' }}" href="{{ path(item['path']) }}">{{ item['name'] }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+
+</div>
+</nav>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+{% endblock %}
+
+{% block fos_user_content %}
+{% endblock fos_user_content %}
+
+{% block footer %}
+{% endblock %}

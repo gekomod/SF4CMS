@@ -1,0 +1,24 @@
+{% extends sonata_block.templates.block_base %}
+
+{% block block %}
+     <div class="col-lg-12 col-xs-6">
+        <!-- small box -->
+        <div class="small-box bg-yellow">
+            <div class="inner">
+                <h3>{% if content is not null %}
+                        {{ content }}
+                    {% else %}
+                        No feeds available.
+                    {% endif %}</h3>
+
+                <p>{{ settings.title }}</p>
+            </div>
+            <div class="icon">
+                <i class="ion ion-person-add"></i>
+            </div>
+            <a href="{{ path(settings.url) }}" class="small-box-footer">
+                Więcej Informacji <i class="fa fa-arrow-circle-right"></i>
+            </a>
+        </div>
+    </div>
+{% endblock %}

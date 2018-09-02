@@ -1,0 +1,52 @@
+<div class="light b-t">
+    <div id="primary" class="content-area"
+         data-bg-possition="center"
+         data-bg-repeat="false"
+         style="background: url('/bundles/assets/img/icon/icon-circles.png');">
+        <main id="main" class="site-main">
+            <div class="container">
+                <div class="col-xl-8 mx-lg-auto p-t-b-80">
+                        <header class="text-center">
+                            <h1>Witaj Ponownie</h1>
+                            <p class="section-subtitle">Hey Soldier welcome back signin now there is lot of new stuff
+                                waiting
+                                for you</p>
+                            <img class="p-t-b-50" src="/bundles/assets/img/icon/icon-login.png" alt="">
+                        </header>
+
+{% if error %}
+<div class="alert alert-danger" role="alert">
+  {{ error.message }}
+</div>
+{% endif %}
+
+                        <form action="{{ path('login_check') }}" method="post">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group has-icon"><i class="icon-envelope-o"></i>
+                                        <input type="text" class="form-control form-control-lg"
+                                               placeholder="Login" id="username" name="_username" value="{{ last_username }}">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group has-icon"><i class="icon-user-secret"></i>
+                                        <input type="password" class="form-control form-control-lg"
+                                               placeholder="Hasło" id="password" name="_password">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <input type="submit" class="btn btn-primary btn-lg btn-block" value="Zaloguj Mnie">
+                                    <p class="forget-pass">Zapomniałeś login lub hasło, <a href="{{ path("forgot") }}">wejdź tu</a>.</p>
+                                </div>
+                                <div class="col-lg-12">
+                                    <a href="#" class="btn btn-lg btn-block btn-social facebook"><i class="icon-facebook"></i> Login with Facebook</a>
+                                </div>
+                            </div>
+                        </form>
+                </div>
+            </div>
+        </main>
+        <!-- #main -->
+    </div>
+    <!-- #primary -->
+</div>
