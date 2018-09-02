@@ -44,7 +44,7 @@ class LoginController extends Controller
      */
     public function loginFacebookAction()
     {
-     throw new \Exception('Już wkrótce Będzie Logowanie z FB/Github');
+     throw new \Exception('Już wkrótce Będzie Logowanie z FB/Github.');
     }
 
     /**
