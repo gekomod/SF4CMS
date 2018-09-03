@@ -20,3 +20,9 @@ services:
           [~, "@templating","@doctrine"]
         tags:
         - { name: "sonata.block" }
+
+    settings.new:
+        class: App\Application\SettingsBundle\Service\Settings_Get
+        arguments:
+          ["@doctrine"]
+        public: true

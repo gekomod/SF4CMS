@@ -6,6 +6,9 @@ use function GuzzleHttp\Promise\exception_for;
 use http\Exception;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+#use Sonata\GoogleAuthenticator\GoogleAuthenticator;
+use Google\Authenticator\GoogleAuthenticator;
+use App\Application\SettingsBundle\Service\Settings_Get;
 
 class LoginController extends Controller
 {
@@ -44,7 +47,33 @@ class LoginController extends Controller
      */
     public function loginFacebookAction()
     {
+        $facebook_id = $this->container->get('settings.new')->getSettings('facebook_id');
+        $facebook_secret = $this->container->get('settings.new')->getSettings('facebook_client');
+        $fb = new \Facebook\Facebook([
+            'app_id' => $facebook_id,
+            'app_secret' => $facebook_secret,
+            'default_graph_version' => 'v2.10',
+            'enable_beta_mode' => false,
+        ]);
+
+        $helper = $fb->getRedirectLoginHelper();
+
+        $permissions = ['email']; // Optional permissions
+        $loginUrl = $helper->getLoginUrl('https://webpi.pl/login/check-facebook', $permissions);
+
+        echo '<a href="' . $loginUrl . '">Log in with Facebook!</a>';
+
      throw new \Exception('Już wkrótce Będzie Logowanie z FB/Github.');
+    }
+
+    /**
+     * @Route("/login/check-google", name="google_login")
+     */
+    public function loginGoogleAction()
+    {
+
+        $secret = $this->container->get('settings.new')->getSettings('google_secret');
+        throw new \Exception($secret);
     }
 
     /**

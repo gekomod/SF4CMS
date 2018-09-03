@@ -47,7 +47,7 @@ protected $themedir;
     {
 	$em = $this->doctrine->getManager();
         $myRepo = $em->getRepository(Settings::class);
-        return $myRepo->findBy(["name" => $opcje])->getVar();
+        return $myRepo->findBy(["name" => $opcje])[0]->getVar();
     }
 
 }
