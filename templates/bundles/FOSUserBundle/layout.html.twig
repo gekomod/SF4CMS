@@ -15,17 +15,21 @@
             ] %}          
         {% endif %}
 {% if is_granted("ROLE_USER") %}
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg w-100 order-1 order-md-0">
 <div class="container">
 
-<ul class="nav nav-tabs mb-12 col-md-12 nav-material">
+<ul class="nav nav-tabs col-md-12 nav-material">
         {% for item in mainMenu %}
           <li class="nav-item">
             <a class="nav-link{{ app.request.get('_route') == item['path'] ? ' active' : '' }}" href="{{ path(item['path']) }}">{{ item['name'] }}</a>
           </li>
         {% endfor %}
+        {% if user.facebookUid is not null %}
+            <li class="nav-item float-md-right">
+                <a href="#" class="nav-link text-info" >Połączony z FaceBook</a>
+            </li>
+        {% endif %}
       </ul>
-
 </div>
 </nav>
 {% endif %}

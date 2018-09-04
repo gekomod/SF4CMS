@@ -2,7 +2,20 @@
 {% block fos_user_content %}
 <main class="content-wrapper">
         <div class="container">
-
+            {% for label, flashes in app.session.flashbag.all %}
+                {% for flash in flashes %}
+                    {% if ( label == 'success' ) %}
+                            <div class="alert alert-success alert-dismissible fade show">
+                                    <h4 class="alert-heading">Success!</h4>
+                                    <p>{{ flash }}</p>
+                            </div>
+                    {% elseif ( label == 'error' ) %}
+                            <div class="alert alert-danger alert-dismissible fade show">
+                                    <p>{{ flash }}</p>
+                            </div>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
 {% include "@FOSUser/Profile/show_content.html.twig" %}
 
 </div>

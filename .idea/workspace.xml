@@ -2,16 +2,176 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86d3d9ef-e4c5-49e5-a0e5-7faa2a3629d7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Application/SettingsBundle/Service/Settings_Get.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/SettingsBundle/Resources/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/SettingsBundle/Resources/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/SettingsBundle/Twig/PathExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/SettingsBundle/Twig/PathExtension.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Application/Sonata/UserBundle/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/Sonata/UserBundle/Entity/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bundles/FOSUserBundle/Profile/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bundles/FOSUserBundle/Profile/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bundles/FOSUserBundle/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bundles/FOSUserBundle/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/default/login/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/login/index.html.twig" afterDir="false" />
     </list>
+    <ignored path="C:\Users\zaba1\PhpstormProjects\untitled1\.idea\shelf/" />
+    <ignored path="$PROJECT_DIR$/vendor/cocur/slugify/" />
+    <ignored path="$PROJECT_DIR$/vendor/composer/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/annotations/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/cache/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/collections/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/common/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/dbal/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/doctrine-migrations-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/event-manager/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/inflector/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/instantiator/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/lexer/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/migrations/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/orm/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/persistence/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/phpcr-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/reflection/" />
+    <ignored path="$PROJECT_DIR$/vendor/easycorp/easy-log-handler/" />
+    <ignored path="$PROJECT_DIR$/vendor/egulias/email-validator/" />
+    <ignored path="$PROJECT_DIR$/vendor/exsyst/swagger/" />
+    <ignored path="$PROJECT_DIR$/vendor/fig/link-util/" />
+    <ignored path="$PROJECT_DIR$/vendor/friendsofsymfony/ckeditor-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/friendsofsymfony/rest-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/" />
+    <ignored path="$PROJECT_DIR$/vendor/guzzlehttp/promises/" />
+    <ignored path="$PROJECT_DIR$/vendor/guzzlehttp/psr7/" />
+    <ignored path="$PROJECT_DIR$/vendor/imagine/imagine/" />
+    <ignored path="$PROJECT_DIR$/vendor/jdorn/sql-formatter/" />
+    <ignored path="$PROJECT_DIR$/vendor/jms/metadata/" />
+    <ignored path="$PROJECT_DIR$/vendor/jms/parser-lib/" />
+    <ignored path="$PROJECT_DIR$/vendor/jms/serializer/" />
+    <ignored path="$PROJECT_DIR$/vendor/jms/serializer-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/justinrainbow/json-schema/" />
+    <ignored path="$PROJECT_DIR$/vendor/knplabs/gaufrette/" />
+    <ignored path="$PROJECT_DIR$/vendor/knplabs/knp-markdown-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/knplabs/knp-menu/" />
+    <ignored path="$PROJECT_DIR$/vendor/knplabs/knp-menu-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/knplabs/packagist-api/" />
+    <ignored path="$PROJECT_DIR$/vendor/kriswallsmith/buzz/" />
+    <ignored path="$PROJECT_DIR$/vendor/michelf/php-markdown/" />
+    <ignored path="$PROJECT_DIR$/vendor/monolog/monolog/" />
+    <ignored path="$PROJECT_DIR$/vendor/nelmio/api-doc-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/nikic/php-parser/" />
+    <ignored path="$PROJECT_DIR$/vendor/ocramius/package-versions/" />
+    <ignored path="$PROJECT_DIR$/vendor/ocramius/proxy-manager/" />
+    <ignored path="$PROJECT_DIR$/vendor/paragonie/random_compat/" />
+    <ignored path="$PROJECT_DIR$/vendor/phpcollection/phpcollection/" />
+    <ignored path="$PROJECT_DIR$/vendor/phpcr/phpcr/" />
+    <ignored path="$PROJECT_DIR$/vendor/phpcr/phpcr-utils/" />
+    <ignored path="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common/" />
+    <ignored path="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock/" />
+    <ignored path="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver/" />
+    <ignored path="$PROJECT_DIR$/vendor/phpoption/phpoption/" />
+    <ignored path="$PROJECT_DIR$/vendor/psr/cache/" />
+    <ignored path="$PROJECT_DIR$/vendor/psr/container/" />
+    <ignored path="$PROJECT_DIR$/vendor/psr/http-message/" />
+    <ignored path="$PROJECT_DIR$/vendor/psr/link/" />
+    <ignored path="$PROJECT_DIR$/vendor/psr/log/" />
+    <ignored path="$PROJECT_DIR$/vendor/psr/simple-cache/" />
+    <ignored path="$PROJECT_DIR$/vendor/seld/jsonlint/" />
+    <ignored path="$PROJECT_DIR$/vendor/seld/phar-utils/" />
+    <ignored path="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/sensiolabs/security-checker/" />
+    <ignored path="$PROJECT_DIR$/vendor/sonata-project/admin-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/sonata-project/block-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/sonata-project/cache/" />
+    <ignored path="$PROJECT_DIR$/vendor/sonata-project/cache-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/sonata-project/core-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/sonata-project/datagrid-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/sonata-project/doctrine-extensions/" />
+    <ignored path="$PROJECT_DIR$/vendor/sonata-project/doctrine-orm-admin-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/sonata-project/easy-extends-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/sonata-project/exporter/" />
+    <ignored path="$PROJECT_DIR$/vendor/sonata-project/formatter-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/sonata-project/google-authenticator/" />
+    <ignored path="$PROJECT_DIR$/vendor/sonata-project/media-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/sonata-project/notification-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/sonata-project/page-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/sonata-project/seo-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/sonata-project/user-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony-cmf/routing/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony-cmf/routing-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/acl-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/asset/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/browser-kit/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/cache/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/class-loader/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/config/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/console/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/css-selector/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/debug/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/debug-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/debug-pack/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/dependency-injection/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/doctrine-bridge/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/dom-crawler/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/dotenv/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/event-dispatcher/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/expression-language/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/filesystem/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/finder/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/flex/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/form/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/framework-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/http-foundation/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/http-kernel/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/inflector/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/intl/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/maker-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/monolog-bridge/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/monolog-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/options-resolver/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/orm-pack/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/polyfill-ctype/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/polyfill-php72/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/process/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/profiler-pack/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/property-access/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/property-info/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/routing/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/security/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/security-acl/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/security-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/serializer/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/serializer-pack/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/stopwatch/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/templating/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/test-pack/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/translation/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/twig-bridge/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/twig-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/validator/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/var-dumper/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/web-link/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/web-profiler-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/web-server-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/yaml/" />
+    <ignored path="$PROJECT_DIR$/vendor/twig/extensions/" />
+    <ignored path="$PROJECT_DIR$/vendor/twig/twig/" />
+    <ignored path="$PROJECT_DIR$/vendor/webmozart/assert/" />
+    <ignored path="$PROJECT_DIR$/vendor/willdurand/jsonp-callback-validator/" />
+    <ignored path="$PROJECT_DIR$/vendor/willdurand/negotiation/" />
+    <ignored path="$PROJECT_DIR$/vendor/zendframework/zend-code/" />
+    <ignored path="$PROJECT_DIR$/vendor/zendframework/zend-eventmanager/" />
+    <ignored path="$PROJECT_DIR$/vendor/zendframework/zenddiagnostics/" />
+    <ignored path="$PROJECT_DIR$/vendor/zircote/swagger-php/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -31,32 +191,40 @@
     <session id="1765049800">
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="php" value="757" />
-          <entry key="twig" value="87" />
-          <entry key="txt" value="49" />
+          <entry key="php" value="1443" />
+          <entry key="twig" value="691" />
+          <entry key="txt" value="57" />
           <entry key="yaml" value="93" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PHP" value="757" />
-          <entry key="PLAIN_TEXT" value="49" />
-          <entry key="Twig" value="87" />
+          <entry key="PHP" value="1443" />
+          <entry key="PLAIN_TEXT" value="57" />
+          <entry key="Twig" value="691" />
           <entry key="YAML" value="93" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="php" value="7" />
-          <entry key="twig" value="1" />
+          <entry key="php" value="13" />
+          <entry key="twig" value="4" />
+          <entry key="xml" value="2" />
           <entry key="yaml" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PHP" value="7" />
-          <entry key="Twig" value="1" />
+          <entry key="PHP" value="13" />
+          <entry key="Twig" value="4" />
+          <entry key="XML" value="2" />
           <entry key="YAML" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.114" value="1" />
+          <entry key="project.opened" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -67,55 +235,41 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/bundles.php">
+        <entry file="file://$PROJECT_DIR$/src/Controller/LoginController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="43" column="80" selection-start-line="43" selection-start-column="80" selection-end-line="43" selection-end-column="80" />
+            <state relative-caret-position="398">
+              <caret line="158" column="73" selection-start-line="158" selection-start-column="73" selection-end-line="158" selection-end-column="73" />
+              <folding>
+                <element signature="e#34#80#0#PHP" expanded="true" />
+                <element signature="e#5835#5882#1#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Controller/LoginController.php">
+        <entry file="file://$PROJECT_DIR$/src/Application/Sonata/UserBundle/Entity/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="55" column="39" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
-              <folding>
-                <element signature="e#34#80#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="34">
+              <caret line="2" column="50" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="50" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Application/SettingsBundle/Resources/config/services.yaml">
+        <entry file="file://$PROJECT_DIR$/vendor/sonata-project/user-bundle/src/Entity/UserManager.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" selection-start-line="26" selection-end-line="26" selection-end-column="10" />
+            <state relative-caret-position="670">
+              <caret line="151" lean-forward="true" selection-start-line="151" selection-end-line="151" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Application/SettingsBundle/Service/Settings_Get.php">
+        <entry file="file://$PROJECT_DIR$/vendor/sonata-project/user-bundle/src/Resources/config/doctrine/BaseUser.orm.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-              <folding>
-                <element signature="e#58#109#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Application/SettingsBundle/Twig/PathExtension.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="48" column="54" lean-forward="true" selection-start-line="48" selection-start-column="54" selection-end-line="48" selection-end-column="54" />
-              <folding>
-                <element signature="e#55#106#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="272">
+              <caret line="16" column="32" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -123,24 +277,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/default/login/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-              <folding>
-                <element signature="e#2469#2483#0#Twig" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/sonata-project/page-bundle/src/Block/ContainerBlockService.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
-              <folding>
-                <element signature="e#7#254#0#PHP" expanded="true" />
-                <element signature="e#292#380#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="364">
+              <caret line="43" column="53" selection-start-line="43" selection-start-column="53" selection-end-line="43" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -155,10 +293,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/bundles/FOSUserBundle/Profile/show.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+              <folding>
+                <element signature="e#12#37#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/bundles/FOSUserBundle/layout.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/bundles/FOSUserBundle/ChangePassword/change_password_content.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
-              <caret line="20" column="14" lean-forward="true" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+              <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -166,8 +325,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/packages/security.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="36" column="23" lean-forward="true" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+            <state relative-caret-position="612">
+              <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -183,14 +342,17 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/default/login/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Application/SettingsBundle/Service/Settings.php" />
         <option value="$PROJECT_DIR$/config/services.yaml" />
         <option value="$PROJECT_DIR$/src/Application/SettingsBundle/Resources/config/services.yaml" />
         <option value="$PROJECT_DIR$/src/Application/SettingsBundle/Twig/PathExtension.php" />
         <option value="$PROJECT_DIR$/config/bundles.php" />
         <option value="$PROJECT_DIR$/src/Application/SettingsBundle/Service/Settings_Get.php" />
+        <option value="$PROJECT_DIR$/src/Application/Sonata/UserBundle/Entity/User.php" />
+        <option value="$PROJECT_DIR$/templates/default/login/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Controller/LoginController.php" />
+        <option value="$PROJECT_DIR$/templates/bundles/FOSUserBundle/Profile/show.html.twig" />
+        <option value="$PROJECT_DIR$/templates/bundles/FOSUserBundle/layout.html.twig" />
       </list>
     </option>
   </component>
@@ -199,6 +361,22 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/public/bundles/fosckeditor/package.json" />
+      <path value="$PROJECT_DIR$/public/bundles/sonataadmin/vendor/admin-lte/package.json" />
+      <path value="$PROJECT_DIR$/public/bundles/sonataadmin/vendor/jquery.scrollTo/package.json" />
+      <path value="$PROJECT_DIR$/public/bundles/sonataadmin/vendor/jqueryui/package.json" />
+      <path value="$PROJECT_DIR$/public/bundles/sonataadmin/vendor/readmore-js/package.json" />
+      <path value="$PROJECT_DIR$/public/bundles/sonataadmin/vendor/slimScroll/package.json" />
+      <path value="$PROJECT_DIR$/public/bundles/sonatacore/vendor/bootstrap/package.json" />
+      <path value="$PROJECT_DIR$/public/bundles/sonatacore/vendor/components-font-awesome/package.json" />
+      <path value="$PROJECT_DIR$/public/bundles/sonatacore/vendor/eonasdan-bootstrap-datetimepicker/package.json" />
+      <path value="$PROJECT_DIR$/public/bundles/sonatacore/vendor/select2/package.json" />
+      <path value="$PROJECT_DIR$/public/bundles/sonataformatter/vendor/markitup-markitup/package.json" />
+      <path value="$PROJECT_DIR$/public/bundles/sonatamedia/nivo-gallery/package.json" />
+    </packageJsonPaths>
   </component>
   <component name="PhpServers">
     <servers />
@@ -401,40 +579,24 @@
               <item name="untitled1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Application" type="462c0819:PsiDirectoryNode" />
-              <item name="SettingsBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Sonata" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="untitled1" type="b2602c69:ProjectViewProjectNode" />
               <item name="untitled1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Application" type="462c0819:PsiDirectoryNode" />
-              <item name="SettingsBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="Sonata" type="462c0819:PsiDirectoryNode" />
+              <item name="UserBundle" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="untitled1" type="b2602c69:ProjectViewProjectNode" />
               <item name="untitled1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Application" type="462c0819:PsiDirectoryNode" />
-              <item name="SettingsBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="untitled1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="untitled1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Application" type="462c0819:PsiDirectoryNode" />
-              <item name="SettingsBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="untitled1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="untitled1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Application" type="462c0819:PsiDirectoryNode" />
-              <item name="SettingsBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Twig" type="462c0819:PsiDirectoryNode" />
+              <item name="Sonata" type="462c0819:PsiDirectoryNode" />
+              <item name="UserBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Entity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="untitled1" type="b2602c69:ProjectViewProjectNode" />
@@ -500,7 +662,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="07e6a217-eddf-4020-b0ad-b07770f9e159" name="Default Changelist" comment="" />
+      <changelist id="86d3d9ef-e4c5-49e5-a0e5-7faa2a3629d7" name="Default Changelist" comment="" />
       <created>1535233399174</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -509,6 +671,7 @@
       <workItem from="1535234065083" duration="15750000" />
       <workItem from="1535482211541" duration="15621000" />
       <workItem from="1535655986992" duration="41263000" />
+      <workItem from="1536059561578" duration="12785000" />
     </task>
     <task id="LOCAL-00001" summary="Update Login Controller">
       <created>1535916602347</created>
@@ -545,11 +708,25 @@
       <option name="project" value="LOCAL" />
       <updated>1535920840523</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Changes">
+      <created>1536012228589</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1536012228589</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Changes">
+      <created>1536012337062</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1536012337062</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8460000" />
+    <option name="totallyTimeSpent" value="25673000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
@@ -557,7 +734,7 @@
     <layout>
       <window_info id="Structure" order="0" sideWeight="0.50396824" side_tool="true" weight="0.2062982" />
       <window_info id="Favorites" order="1" sideWeight="0.50396824" side_tool="true" weight="0.2062982" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.49603173" visible="true" weight="0.2062982" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.49603173" visible="true" weight="0.20886889" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32978722" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -565,18 +742,22 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49807197" visible="true" weight="0.22340426" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49807197" weight="0.22340426" />
       <window_info anchor="bottom" id="TODO" order="8" sideWeight="0.49807197" weight="0.32978722" />
       <window_info anchor="bottom" id="File Transfer" order="9" sideWeight="0.4974293" weight="0.32712767" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4974293" weight="0.16090426" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50192803" side_tool="true" weight="0.32978722" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50192803" side_tool="true" weight="0.22340426" />
+      <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Remote Host" order="3" weight="0.32969153" />
       <window_info anchor="right" id="Database" order="4" weight="0.32969153" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -604,42 +785,18 @@
       </map>
     </option>
   </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Update Login Controller" />
     <MESSAGE value="Add Login button FB G+" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Login button FB G+" />
+    <MESSAGE value="Changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/default/login/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="e#2469#2483#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bundles/FOSUserBundle/ChangePassword/change_password_content.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="14" lean-forward="true" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/page-bundle/src/Block/ContainerBlockService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
-          <folding>
-            <element signature="e#7#254#0#PHP" expanded="true" />
-            <element signature="e#292#380#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/services.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="407">
@@ -647,10 +804,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/packages/security.yaml">
+    <entry file="file://$PROJECT_DIR$/config/bundles.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="36" column="23" lean-forward="true" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+        <state relative-caret-position="731">
+          <caret line="43" column="80" selection-start-line="43" selection-start-column="80" selection-end-line="43" selection-end-column="80" />
         </state>
       </provider>
     </entry>
@@ -661,26 +818,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Application/SettingsBundle/Twig/PathExtension.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="48" column="54" lean-forward="true" selection-start-line="48" selection-start-column="54" selection-end-line="48" selection-end-column="54" />
-          <folding>
-            <element signature="e#55#106#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/bundles.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="43" column="80" selection-start-line="43" selection-start-column="80" selection-end-line="43" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Application/SettingsBundle/Service/Settings_Get.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
+        <state relative-caret-position="340">
           <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
           <folding>
             <element signature="e#58#109#0#PHP" expanded="true" />
@@ -688,13 +828,139 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application/SettingsBundle/Twig/PathExtension.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="48" column="54" selection-start-line="48" selection-start-column="54" selection-end-line="48" selection-end-column="54" />
+          <folding>
+            <element signature="e#55#106#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/page-bundle/src/Block/ContainerBlockService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+          <folding>
+            <element signature="e#7#254#0#PHP" expanded="true" />
+            <element signature="e#292#380#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/bundles/FOSUserBundle/ChangePassword/change_password_content.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/security.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/user-bundle/src/Entity/BaseUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/user-bundle/src/Entity/GroupManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="670">
+          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/doctrine-mapping/User.orm.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/user-bundle/src/Entity/UserManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="670">
+          <caret line="151" lean-forward="true" selection-start-line="151" selection-end-line="151" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/user-bundle/src/Resources/config/doctrine/BaseUser.orm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="32" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/user-bundle/src/Controller/Api/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="370" lean-forward="true" selection-start-line="370" selection-end-line="370" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/user-bundle/src/Controller/AdminSecurityController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="670">
+          <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/bundles/FOSUserBundle/Profile/edit_content.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="30" column="113" selection-start-line="30" selection-start-column="113" selection-end-line="30" selection-end-column="113" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/bundles/FOSUserBundle/Profile/show_content.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="54" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/default/login/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="43" column="53" selection-start-line="43" selection-start-column="53" selection-end-line="43" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/LoginController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="55" column="39" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
+        <state relative-caret-position="398">
+          <caret line="158" column="73" selection-start-line="158" selection-start-column="73" selection-end-line="158" selection-end-column="73" />
           <folding>
             <element signature="e#34#80#0#PHP" expanded="true" />
+            <element signature="e#5835#5882#1#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/bundles/FOSUserBundle/Profile/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#12#37#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/bundles/FOSUserBundle/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application/Sonata/UserBundle/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="50" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="50" />
         </state>
       </provider>
     </entry>
