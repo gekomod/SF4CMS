@@ -40,6 +40,6 @@ return [
     FOS\CKEditorBundle\FOSCKEditorBundle::class => ['all' => true],
     Knp\Bundle\MarkdownBundle\KnpMarkdownBundle::class => ['all' => true],
     Sonata\FormatterBundle\SonataFormatterBundle::class => ['all' => true],
-    App\Application\SettingsBundle\SettingsBundle::class => ['all' => true],
-    App\Application\ExtensionsBundle\ExtensionsBundle::class => ['all' => true],
+    Gekomod\SettingsBundle\SettingsBundle::class => ['all' => true],
+    Gekomod\ExtensionsBundle\ExtensionsBundle::class => ['all' => true],
 ];

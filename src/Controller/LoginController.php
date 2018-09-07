@@ -8,11 +8,8 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-#use Sonata\GoogleAuthenticator\GoogleAuthenticator;
-use Google\Authenticator\GoogleAuthenticator;
 use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
-
 
 class LoginController extends Controller
 {
@@ -21,7 +18,6 @@ class LoginController extends Controller
      */
     public function index()
     {
-
     $authenticationUtils = $this->get('security.authentication_utils');
 
     // pobranie błędu logowania, jeśli sie taki pojawił
@@ -198,8 +194,8 @@ class LoginController extends Controller
      */
     public function loginGoogleAction()
     {
+        $secret = $this->container->get('settings.new')->getSettings('google_id');
 
-        $secret = $this->container->get('settings.new')->getSettings('google_secret');
         throw new \Exception($secret);
     }
 

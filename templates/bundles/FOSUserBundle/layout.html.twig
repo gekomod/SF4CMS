@@ -24,11 +24,13 @@
             <a class="nav-link{{ app.request.get('_route') == item['path'] ? ' active' : '' }}" href="{{ path(item['path']) }}">{{ item['name'] }}</a>
           </li>
         {% endfor %}
-        {% if user.facebookUid is not null %}
-            <li class="nav-item float-md-right">
-                <a href="#" class="nav-link text-info" >Połączony z FaceBook</a>
-            </li>
-        {% endif %}
+      {% if app.request.pathInfo == '/profile/edit' or app.request.pathInfo == '/profile/change-password' %} {% else %}
+          {% if user.facebookUid is not null %}
+              <li class="nav-item float-md-right">
+                  <a href="#" class="nav-link text-info" >Połączony z FaceBook</a>
+              </li>
+          {% endif %}
+      {% endif %}
       </ul>
 </div>
 </nav>
