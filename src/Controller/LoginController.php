@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use GuzzleHttp\Client;
 use function GuzzleHttp\Promise\exception_for;
 use http\Exception;
 use Symfony\Component\HttpFoundation\Response;
@@ -13,6 +14,9 @@ use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
 
 class LoginController extends Controller
 {
+
+    protected $github_url = 'https://github.com/login/oauth/access_token';
+
     /**
      * @Route("/login", name="login")
      */
@@ -129,7 +133,7 @@ class LoginController extends Controller
 
         $user = $response->getGraphUser();
 
-        $succesfullyRegistered = $this->register($user->getProperty('email'),\str_replace(" ","",$user->getProperty('name')),\str_replace(" ","",$user->getProperty('name')),$user->getProperty('id'));
+        $succesfullyRegistered = $this->register($user->getProperty('email'),\str_replace(" ","",$user->getProperty('name')),\str_replace(" ","",$user->getProperty('name')),$user->getProperty('id'),null);
 
         if($succesfullyRegistered){
             echo 'REJESTRACJA POWIODŁA SIĘ';
@@ -166,7 +170,7 @@ class LoginController extends Controller
      *
      * @return boolean User registered / not registered
      **/
-    private function register($email,$username,$password,$id){
+    private function register($email,$username,$password,$id,$uid){
         $userManager = $this->get('fos_user.user_manager');
 
         $email_exist = $userManager->findUserByEmail($email);
@@ -182,7 +186,11 @@ class LoginController extends Controller
         $user->setEmailCanonical($email);
         $user->setEnabled(1); // enable the user or enable it later with a confirmation token in the email
         // this method will encrypt the password with the default settings :)
-        $user->setfacebookUid($id);
+        if($id == null) {
+            $user->setTwitterUid($uid);
+        } else {
+            $user->setfacebookUid($id);
+        }
         $user->setPlainPassword($password);
         $userManager->updateUser($user);
 
@@ -194,9 +202,89 @@ class LoginController extends Controller
      */
     public function loginGoogleAction()
     {
-        $secret = $this->container->get('settings.new')->getSettings('google_id');
+        $secret = $this->container->get('settings.new')->getSettings('google_secret');
+        $id = $this->container->get('settings.new')->getSettings('google_id');
 
         throw new \Exception($secret);
+    }
+
+    /**
+     * @Route("/login/check-github", name="github_login")
+     */
+    public function loginGithubAction()
+    {
+        $secret = $this->container->get('settings.new')->getSettings('github_secret');
+        $id = $this->container->get('settings.new')->getSettings('github_id');
+        $request = Request::createFromGlobals();
+        $client = new \GuzzleHttp\Client([
+            'base_uri' => 'https://api.github.com',
+            'defaults' => [
+                'exceptions' => false
+            ]
+        ]);
+
+        if(null !== $request->query->get('code')) {
+            $postdata = \http_build_query(
+                array(
+                    'client_id' => $id,
+                    'client_secret' => $secret,
+                    'scope' => 'user,user:email',
+                    'code' => $request->query->get('code')
+                )
+            );
+            $opts = array('http' =>
+                array(
+                    'method'  => 'POST',
+                    'header'  => 'Content-type: application/x-www-form-urlencoded',
+                    'content' => $postdata
+                )
+            );
+
+            $context = \stream_context_create($opts);
+            $result = \file_get_contents($this->github_url, false, $context);
+            $json_url = 'https://api.github.com/user?'.$result;
+            $ac = explode('&',$result);
+            $access = str_replace("access_token=","", $ac[0]);
+
+            $responses = $client->get('/user/emails?access_token='.$access, ['verify' => true]);
+
+            $options  = array('http' => array('user_agent'=> $_SERVER['HTTP_USER_AGENT']));
+            $context  = \stream_context_create($options);
+            $response = \file_get_contents($json_url, false, $context);
+            $response = \json_decode($response);
+            $response->email = \json_decode($responses->getBody()->getContents())[0]->email;
+
+
+            $this->register($response->email,$response->login,$response->login,null,$response->id);
+
+
+            $em = $this->getDoctrine()->getManager();
+            //$usersRepository = $em->getRepository("mybundleuserBundle:User");
+            // or use directly the namespace and the name of the class
+            $usersRepository = $em->getRepository("App\Application\Sonata\UserBundle\Entity\User");
+            $checklogins = $usersRepository->findOneBy(array('email' => $response->email,'twitterUid'=>$response->id));
+
+            try {
+                if(null !== $checklogins->getRoles() ) {
+                    $token = new UsernamePasswordToken($checklogins, null, 'main', $checklogins->getRoles());
+                    $this->container->get('security.token_storage')->setToken($token);
+                    $this->container->get('session')->set('_security_main', serialize($token));
+                    $this->addFlash('success', 'Logowanie zakonczone poprawnie');
+                    return $this->redirectToRoute('fos_user_profile_show');
+                }
+            } catch (\Exception $ex) {
+                $this->addFlash('error', $ex->getMessage());
+                return $this->redirectToRoute('login');
+            }
+
+        } else {
+            $url = "https://github.com/login/oauth/authorize?client_id=$id&scope=user,user:email";
+            return $this->redirect($url);
+        }
+    }
+
+    public function gitget($options) {
+
     }
 
     /**

@@ -31,6 +31,13 @@
               </li>
           {% endif %}
       {% endif %}
+    {% if app.request.pathInfo == '/profile/edit' or app.request.pathInfo == '/profile/change-password' %} {% else %}
+        {% if user.twitterUid is not null %}
+            <li class="nav-item float-md-right">
+                <a href="#" class="nav-link text-info" >Połączony z GitHub</a>
+            </li>
+        {% endif %}
+    {% endif %}
       </ul>
 </div>
 </nav>
