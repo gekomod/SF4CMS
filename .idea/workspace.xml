@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86d3d9ef-e4c5-49e5-a0e5-7faa2a3629d7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/untitled1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/untitled1.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Application/Sonata/UserBundle/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/Sonata/UserBundle/Entity/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/bundles/FOSUserBundle/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bundles/FOSUserBundle/layout.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/default/login/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/login/index.html.twig" afterDir="false" />
     </list>
     <ignored path="C:\Users\zaba1\PhpstormProjects\untitled1\.idea\shelf/" />
     <ignored path="$PROJECT_DIR$/vendor/cocur/slugify/" />
@@ -192,16 +188,16 @@
     <session id="1765049800">
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="php" value="2894" />
+          <entry key="php" value="3043" />
           <entry key="twig" value="978" />
-          <entry key="txt" value="172" />
+          <entry key="txt" value="188" />
           <entry key="yaml" value="93" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PHP" value="2894" />
-          <entry key="PLAIN_TEXT" value="172" />
+          <entry key="PHP" value="3043" />
+          <entry key="PLAIN_TEXT" value="188" />
           <entry key="Twig" value="978" />
           <entry key="YAML" value="93" />
         </counts>
@@ -246,21 +242,21 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controller/LoginController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="211" column="55" selection-start-line="211" selection-start-column="43" selection-end-line="211" selection-end-column="55" />
+            <state relative-caret-position="196">
+              <caret line="259" column="42" selection-start-line="259" selection-start-column="42" selection-end-line="259" selection-end-column="42" />
               <folding>
                 <element signature="e#34#56#0#PHP" expanded="true" />
                 <element signature="e#5855#5902#1#PHP" expanded="true" />
-                <element signature="e#10287#10334#1#PHP" expanded="true" />
+                <element signature="e#10357#10404#1#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/default/login/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="466">
@@ -284,8 +280,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Application/Sonata/UserBundle/Entity/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="56" column="5" lean-forward="true" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
+            <state relative-caret-position="366">
+              <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -308,10 +304,10 @@
         <option value="$PROJECT_DIR$/src/Application/SettingsBundle/Service/Settings_Get.php" />
         <option value="$PROJECT_DIR$/templates/bundles/FOSUserBundle/Profile/show.html.twig" />
         <option value="$PROJECT_DIR$/config/bundles.php" />
-        <option value="$PROJECT_DIR$/src/Application/Sonata/UserBundle/Entity/User.php" />
         <option value="$PROJECT_DIR$/templates/bundles/FOSUserBundle/layout.html.twig" />
-        <option value="$PROJECT_DIR$/src/Controller/LoginController.php" />
         <option value="$PROJECT_DIR$/templates/default/login/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Application/Sonata/UserBundle/Entity/User.php" />
+        <option value="$PROJECT_DIR$/src/Controller/LoginController.php" />
       </list>
     </option>
   </component>
@@ -628,7 +624,7 @@
       <workItem from="1535234065083" duration="15750000" />
       <workItem from="1535482211541" duration="15621000" />
       <workItem from="1535655986992" duration="41263000" />
-      <workItem from="1536059561578" duration="64165000" />
+      <workItem from="1536059561578" duration="64743000" />
     </task>
     <task id="LOCAL-00001" summary="Update Login Controller">
       <created>1535916602347</created>
@@ -693,11 +689,18 @@
       <option name="project" value="LOCAL" />
       <updated>1536352547078</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Add Github Login">
+      <created>1536618355333</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1536618355333</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77053000" />
+    <option name="totallyTimeSpent" value="77631000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
@@ -705,7 +708,7 @@
     <layout>
       <window_info id="Structure" order="0" sideWeight="0.50396824" side_tool="true" weight="0.2062982" />
       <window_info id="Favorites" order="1" sideWeight="0.50396824" side_tool="true" weight="0.2062982" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.49603173" visible="true" weight="0.20886889" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49603173" visible="true" weight="0.20886889" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32978722" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -713,7 +716,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49807197" weight="0.22340426" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" sideWeight="0.49807197" visible="true" weight="0.22340426" />
       <window_info anchor="bottom" id="TODO" order="8" sideWeight="0.49807197" weight="0.32978722" />
       <window_info anchor="bottom" id="File Transfer" order="9" sideWeight="0.4974293" weight="0.32712767" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
@@ -767,7 +770,8 @@
     <MESSAGE value="Changes" />
     <MESSAGE value="FB Login" />
     <MESSAGE value="Changes Remove App/Extensions App/Settings Added to Packagist to composer - vendor folder and rename." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes Remove App/Extensions App/Settings Added to Packagist to composer - vendor folder and rename." />
+    <MESSAGE value="Add Github Login" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Github Login" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/config/services.yaml">
@@ -967,29 +971,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Application/Sonata/UserBundle/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="56" column="5" lean-forward="true" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/bundles/FOSUserBundle/layout.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="36" column="74" selection-start-line="36" selection-start-column="74" selection-end-line="36" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="211" column="55" selection-start-line="211" selection-start-column="43" selection-end-line="211" selection-end-column="55" />
-          <folding>
-            <element signature="e#34#56#0#PHP" expanded="true" />
-            <element signature="e#5855#5902#1#PHP" expanded="true" />
-            <element signature="e#10287#10334#1#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -999,6 +984,25 @@
           <caret line="49" column="119" selection-start-line="49" selection-start-column="119" selection-end-line="49" selection-end-column="119" />
           <folding>
             <element signature="e#2957#2969#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application/Sonata/UserBundle/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="259" column="42" selection-start-line="259" selection-start-column="42" selection-end-line="259" selection-end-column="42" />
+          <folding>
+            <element signature="e#34#56#0#PHP" expanded="true" />
+            <element signature="e#5855#5902#1#PHP" expanded="true" />
+            <element signature="e#10357#10404#1#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

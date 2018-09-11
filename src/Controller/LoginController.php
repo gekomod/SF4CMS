@@ -254,9 +254,11 @@ class LoginController extends Controller
             $response = \json_decode($response);
             $response->email = \json_decode($responses->getBody()->getContents())[0]->email;
 
-
-            $this->register($response->email,$response->login,$response->login,null,$response->id);
-
+            try {
+                $this->register($response->email, $response->login, $response->login, null, $response->id);
+            } catch (\Exception $error){
+                echo $error->getMessage();
+            }
 
             $em = $this->getDoctrine()->getManager();
             //$usersRepository = $em->getRepository("mybundleuserBundle:User");
