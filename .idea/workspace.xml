@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="86d3d9ef-e4c5-49e5-a0e5-7faa2a3629d7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/Sonata/UserBundle/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/Sonata/UserBundle/Entity/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/LoginController.php" afterDir="false" />
     </list>
     <ignored path="C:\Users\zaba1\PhpstormProjects\untitled1\.idea\shelf/" />
@@ -188,16 +187,16 @@
     <session id="1765049800">
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="php" value="3043" />
+          <entry key="php" value="4096" />
           <entry key="twig" value="978" />
-          <entry key="txt" value="188" />
+          <entry key="txt" value="194" />
           <entry key="yaml" value="93" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PHP" value="3043" />
-          <entry key="PLAIN_TEXT" value="188" />
+          <entry key="PHP" value="4096" />
+          <entry key="PLAIN_TEXT" value="194" />
           <entry key="Twig" value="978" />
           <entry key="YAML" value="93" />
         </counts>
@@ -245,12 +244,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controller/LoginController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="259" column="42" selection-start-line="259" selection-start-column="42" selection-end-line="259" selection-end-column="42" />
+            <state relative-caret-position="289">
+              <caret line="222" lean-forward="true" selection-start-line="222" selection-end-line="222" />
               <folding>
                 <element signature="e#34#56#0#PHP" expanded="true" />
                 <element signature="e#5855#5902#1#PHP" expanded="true" />
-                <element signature="e#10357#10404#1#PHP" expanded="true" />
+                <element signature="e#10781#10828#1#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -624,7 +623,7 @@
       <workItem from="1535234065083" duration="15750000" />
       <workItem from="1535482211541" duration="15621000" />
       <workItem from="1535655986992" duration="41263000" />
-      <workItem from="1536059561578" duration="64743000" />
+      <workItem from="1536059561578" duration="75049000" />
     </task>
     <task id="LOCAL-00001" summary="Update Login Controller">
       <created>1535916602347</created>
@@ -696,11 +695,18 @@
       <option name="project" value="LOCAL" />
       <updated>1536618355333</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Repair Github Login">
+      <created>1536654590574</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1536654590575</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77631000" />
+    <option name="totallyTimeSpent" value="87937000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
@@ -716,7 +722,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="7" sideWeight="0.49807197" visible="true" weight="0.22340426" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49807197" weight="0.22340426" />
       <window_info anchor="bottom" id="TODO" order="8" sideWeight="0.49807197" weight="0.32978722" />
       <window_info anchor="bottom" id="File Transfer" order="9" sideWeight="0.4974293" weight="0.32712767" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
@@ -771,7 +777,8 @@
     <MESSAGE value="FB Login" />
     <MESSAGE value="Changes Remove App/Extensions App/Settings Added to Packagist to composer - vendor folder and rename." />
     <MESSAGE value="Add Github Login" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Github Login" />
+    <MESSAGE value="Repair Github Login" />
+    <option name="LAST_COMMIT_MESSAGE" value="Repair Github Login" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/config/services.yaml">
@@ -997,12 +1004,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/LoginController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="259" column="42" selection-start-line="259" selection-start-column="42" selection-end-line="259" selection-end-column="42" />
+        <state relative-caret-position="289">
+          <caret line="222" lean-forward="true" selection-start-line="222" selection-end-line="222" />
           <folding>
             <element signature="e#34#56#0#PHP" expanded="true" />
             <element signature="e#5855#5902#1#PHP" expanded="true" />
-            <element signature="e#10357#10404#1#PHP" expanded="true" />
+            <element signature="e#10781#10828#1#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

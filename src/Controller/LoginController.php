@@ -6,6 +6,7 @@ use GuzzleHttp\Client;
 use function GuzzleHttp\Promise\exception_for;
 use http\Exception;
 use Symfony\Component\HttpFoundation\Response;
+use GuzzleHttp\Psr7\Request as Req;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -177,6 +178,14 @@ class LoginController extends Controller
 
         // Check if the user exists to prevent Integrity constraint violation error in the insertion
         if($email_exist){
+            //$update = $userManager->createUser();
+            $email_exist->setEmail($email);
+            if($id == null) {
+                $email_exist->setTwitterUid($uid);
+            } else {
+                $email_exist->setfacebookUid($id);
+            }
+            $userManager->updateUser($email_exist);
             return false;
         }
 
@@ -204,6 +213,27 @@ class LoginController extends Controller
     {
         $secret = $this->container->get('settings.new')->getSettings('google_secret');
         $id = $this->container->get('settings.new')->getSettings('google_id');
+        $request = Request::createFromGlobals();
+        $client = new \GuzzleHttp\Client([
+            'base_uri' => 'https://accounts.google.com',
+            'defaults' => [
+                'exceptions' => false
+            ]
+        ]);
+
+        if(null !== $request->query->get('code')) {
+            $check = $client->post('/o/oauth2/token',['query' => ['code'=>$request->query->get('code'),
+                'client_id' => $id,
+                'client_secret'=>$secret,
+                'redirect_uri' => 'https://webpi.pl/login/check-google',
+                'grant_type' => 'authorization_code']]);
+
+            var_dump($check->getBody()->getContents());
+        } else {
+            $url = "https://accounts.google.com/o/oauth2/v2/auth?scope=profile&access_type=offline&include_granted_scopes=true&state=state_parameter_passthrough_value&redirect_uri=https://webpi.pl/login/check-google&response_type=code&client_id=$id";
+            return $this->redirect($url);
+        }
+
 
         throw new \Exception($secret);
     }
@@ -261,10 +291,8 @@ class LoginController extends Controller
             }
 
             $em = $this->getDoctrine()->getManager();
-            //$usersRepository = $em->getRepository("mybundleuserBundle:User");
-            // or use directly the namespace and the name of the class
             $usersRepository = $em->getRepository("App\Application\Sonata\UserBundle\Entity\User");
-            $checklogins = $usersRepository->findOneBy(array('email' => $response->email,'twitterUid'=>$response->id));
+            $checklogins = $usersRepository->findOneBy(array('email' => $response->email));
 
             try {
                 if(null !== $checklogins->getRoles() ) {
@@ -283,10 +311,6 @@ class LoginController extends Controller
             $url = "https://github.com/login/oauth/authorize?client_id=$id&scope=user,user:email";
             return $this->redirect($url);
         }
-    }
-
-    public function gitget($options) {
-
     }
 
     /**
