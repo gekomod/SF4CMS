@@ -195,10 +195,14 @@ class LoginController extends Controller
         $user->setEmailCanonical($email);
         $user->setEnabled(1); // enable the user or enable it later with a confirmation token in the email
         // this method will encrypt the password with the default settings :)
-        if($id == null) {
-            $user->setTwitterUid($uid);
+        if($id == false) {
+            $user->setGplusUid($password);
         } else {
-            $user->setfacebookUid($id);
+            if ($id == null) {
+                $user->setTwitterUid($uid);
+            } else {
+                $user->setfacebookUid($id);
+            }
         }
         $user->setPlainPassword($password);
         $userManager->updateUser($user);
@@ -221,16 +225,46 @@ class LoginController extends Controller
             ]
         ]);
 
+        $client_api = new \GuzzleHttp\Client([
+            'base_uri' => 'https://www.googleapis.com',
+            'defaults' => [
+                'exceptions' => false
+            ]
+        ]);
+
         if(null !== $request->query->get('code')) {
             $check = $client->post('/o/oauth2/token',['query' => ['code'=>$request->query->get('code'),
                 'client_id' => $id,
                 'client_secret'=>$secret,
                 'redirect_uri' => 'https://webpi.pl/login/check-google',
                 'grant_type' => 'authorization_code']]);
+            $content = \json_decode($check->getBody()->getContents());
 
-            var_dump($check->getBody()->getContents());
+            $check_user = $client_api->get('/oauth2/v2/userinfo',['query' => ['alt'=>'json',
+                'access_token' => $content->access_token]]);
+            $regi = \json_decode($check_user->getBody()->getContents());
+
+            $this->register($regi->email, $regi->given_name, $regi->id, false, null);
+
+            $em = $this->getDoctrine()->getManager();
+            $usersRepository = $em->getRepository("App\Application\Sonata\UserBundle\Entity\User");
+            $checklogins = $usersRepository->findOneBy(array('email' => $regi->email));
+
+            try {
+                if(null !== $checklogins->getRoles() ) {
+                    $token = new UsernamePasswordToken($checklogins, null, 'main', $checklogins->getRoles());
+                    $this->container->get('security.token_storage')->setToken($token);
+                    $this->container->get('session')->set('_security_main', serialize($token));
+                    $this->addFlash('success', 'Logowanie zakonczone poprawnie, Zalogowany z Poziomu Google');
+                    return $this->redirectToRoute('fos_user_profile_show');
+                }
+            } catch (\Exception $ex) {
+                $this->addFlash('error', $ex->getMessage());
+                return $this->redirectToRoute('login');
+            }
+
         } else {
-            $url = "https://accounts.google.com/o/oauth2/v2/auth?scope=profile&access_type=offline&include_granted_scopes=true&state=state_parameter_passthrough_value&redirect_uri=https://webpi.pl/login/check-google&response_type=code&client_id=$id";
+            $url = "https://accounts.google.com/o/oauth2/v2/auth?scope=profile email&access_type=offline&include_granted_scopes=true&state=state_parameter_passthrough_value&redirect_uri=https://webpi.pl/login/check-google&response_type=code&client_id=$id";
             return $this->redirect($url);
         }
 
