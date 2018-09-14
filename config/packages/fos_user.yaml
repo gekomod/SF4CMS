@@ -13,3 +13,7 @@ fos_user:
     from_email:
         address: "info@ee39.pl"
         sender_name: "Informacja z EE39.PL"
+
+    registration:
+        confirmation:
+            enabled: false

@@ -191,6 +191,7 @@ class LoginController extends Controller
 
         $user = $userManager->createUser();
         $user->setUsername($username);
+        $user->setEnabled(true);
         $user->setEmail($email);
         $user->setEmailCanonical($email);
         $user->setEnabled(1); // enable the user or enable it later with a confirmation token in the email
