@@ -122,6 +122,7 @@ run_composerinstall() {
      mv FormatterMediaExtension.php vendor/sonata-project/media-bundle/src/Twig/Extension/FormatterMediaExtension.php
      echo "====== START COMPOSER AFTER ERROR ======"
      php composer install
+     php bin/console doctrine:schema:update --force
 }
 
 check_isInstalled() {
