@@ -123,6 +123,26 @@ run_composerinstall() {
      echo "====== START COMPOSER AFTER ERROR ======"
      php composer install
      php bin/console doctrine:schema:update --force
+     run_mysqlQuery
+     echo "====== URUCHAMIAM KONFIGURACJE KONCOWĄ ======"
+     bin/console fos:user:create --super-admin
+     echo "====== KONFIGURACJA STRONY ======"
+     php bin/console sonata:page:create-site
+     php bin/console sonata:page:update-core-routes --site=1
+     php bin/console sonata:page:create-snapshots --site=1
+}
+
+run_mysqlQuery() {
+   chmod 777 bin/console
+   mysql -u${MYSQL_USERNAME:="root"} -p${MYSQL_PASSWORD} -D ${MYSQL_DATABASE} -e "INSERT INTO \`settings\` (\`id\`, \`name\`, \`var\`, \`active\`, \`version\`) VALUES
+(1, 'theme', 'default', 'yes', 2),
+(2, 'analitics', 'SET', 'yes', 1),
+(3, 'facebook_client', 'SET', 'yes', 1),
+(4, 'facebook_id', 'SET', 'yes', 1),
+(5, 'google_id', 'SET', 'yes', 1),
+(6, 'google_secret', 'SET', 'yes', 1),
+(7, 'github_id', 'SET', 'yes', 1),
+(8, 'github_secret', 'SET', 'yes', 1);";
 }
 
 check_isInstalled() {
