@@ -39,7 +39,9 @@
         "symfony/twig-bundle": "^4.1",
         "symfony/validator": "^4.1",
         "symfony/web-link": "^4.1",
-        "symfony/yaml": "^4.1"
+        "symfony/yaml": "^4.1",
+        "gekomod/settings-bundle": "*",
+        "gekomod/extensions-bundle": "*"
     },
     "require-dev": {
         "sensiolabs/security-checker": "^4.1",
