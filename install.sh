@@ -29,7 +29,7 @@ fi
 
 DEBUG=NO FORCE=NO UPDATE=NO INSTALL=NO PREFIX=sf4cms/
 yesno=n
-MYSQL_HOST='localhost';
+MYSQL_HOST="localhost";
 MYSQL_USERNAME=none;
 MYSQL_PASSWORD=none;
 MYSQL_PORT=3306;
@@ -45,11 +45,11 @@ set_install() {
     while [ "$yesno" = "n" ];
     do
     {
-    	echo -n "Please enter MySql Host : ";
-    	read MYSQL_HOST;
+    	echo -n "Please enter MySql Host (localhost) : ";
+    	read MYSQL_HOST || MYSQL_HOST='localhost';
 
-    	echo -n "Please enter MySql Username: ";
-    	read MYSQL_USERNAME;
+    	echo -n "Please enter MySql Username (root) : ";
+    	read MYSQL_USERNAME || MYSQL_USERNAME='root';
 
     	echo -n "Please enter MySql Password : ";
     	read MYSQL_PASSWORD;
@@ -57,13 +57,17 @@ set_install() {
     	echo -n "Please enter MySql Database : ";
     	read MYSQL_DATABASE;
 
-    	echo -n "Please enter MySql Port : ";
-    	read MYSQL_PORT;
+    	echo -n "Please enter MySql Port (3306): ";
+    	read MYSQL_PORT || MYSQL_PORT='3306'
 
-    	echo "Mysql Host:  $MYSQL_HOST";
-    	echo "Mysql Username: $MYSQL_USERNAME";
-    	echo "Mysql Password: $MYSQL_PASSWORD";
-    	echo "Mysql Port: $MYSQL_PORT";
+    	until mysql -u ${MYSQL_USERNAME:="root"} -p${MYSQL_PASSWORD}  -e ";" ; do
+             read -p "Can't connect, please retry: " ${MYSQL_PASSWORD}
+        done
+
+    	echo "Mysql Host:  ${MYSQL_HOST:="localhost"}";
+    	echo "Mysql Username: ${MYSQL_USERNAME:="root"}";
+    	echo "Mysql Password: ${MYSQL_PASSWORD}";
+    	echo "Mysql Port: ${MYSQL_PORT:="3306"}";
     	echo -n "Is this correct? (y,n) : ";
     	read yesno;
     }
@@ -95,7 +99,7 @@ MAILER_URL=null://localhost
 # Format described at http://docs.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/configuration.html#connecting-using-a-url
 # For an SQLite database, use: "sqlite:///%kernel.project_dir%/var/data.db"
 # Configure your db driver and server_version in config/packages/doctrine.yaml
-DATABASE_URL=mysql://${MYSQL_USERNAME}:${MYSQL_PASSWORD}@${MYSQL_HOST}:${MYSQL_PORT}/${MYSQL_DATABASE}
+DATABASE_URL=mysql://${MYSQL_USERNAME:="root"}:${MYSQL_PASSWORD}@${MYSQL_HOST:="localhost"}:${MYSQL_PORT:="3306"}/${MYSQL_DATABASE}
 ###< doctrine/doctrine-bundle ###
 EOF
 
