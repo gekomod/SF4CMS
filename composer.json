@@ -9,9 +9,15 @@
         "facebook/graph-sdk": "^5.6",
         "friendsofsymfony/ckeditor-bundle": "1.x-dev",
         "friendsofsymfony/rest-bundle": "^2.3",
+<<<<<<< HEAD
         "friendsofsymfony/user-bundle": "2.1.x-dev",
         "gekomod/extensions-bundle": "^1.1",
         "gekomod/settings-bundle": "^1.0",
+=======
+        "friendsofsymfony/user-bundle": "2.2.x-dev",
+        "gekomod/extensions-bundle": "^1.1",
+        "gekomod/settings-bundle": "^1.0.2",
+>>>>>>> 73db02f35090b46249e3cc8cd9454ed7154ee7ff
         "knplabs/knp-menu": "^2.3",
         "knplabs/packagist-api": "^1.5",
         "nelmio/api-doc-bundle": "^3.2",
@@ -44,7 +50,10 @@
         "symfony/twig-bundle": "^4.1",
         "symfony/validator": "^4.1",
         "symfony/web-link": "^4.1",
-        "symfony/yaml": "^4.1"
+        "symfony/yaml": "^4.1",
+        "php-http/httplug-bundle": "*",
+        "php-http/curl-client": "*",
+        "guzzlehttp/psr7": "*"
     },
     "require-dev": {
         "sensiolabs/security-checker": "^4.1",
