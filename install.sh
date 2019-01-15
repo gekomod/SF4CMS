@@ -29,7 +29,7 @@ fi
 
 DEBUG=NO FORCE=NO UPDATE=NO INSTALL=NO PREFIX=sf4cms/
 yesno=n
-MYSQL_HOST='localhost';
+MYSQL_HOST="localhost";
 MYSQL_USERNAME=none;
 MYSQL_PASSWORD=none;
 MYSQL_PORT=3306;
@@ -45,11 +45,11 @@ set_install() {
     while [ "$yesno" = "n" ];
     do
     {
-    	echo -n "Please enter MySql Host : ";
-    	read MYSQL_HOST;
+    	echo -n "Please enter MySql Host (localhost) : ";
+    	read MYSQL_HOST || MYSQL_HOST='localhost';
 
-    	echo -n "Please enter MySql Username: ";
-    	read MYSQL_USERNAME;
+    	echo -n "Please enter MySql Username (root) : ";
+    	read MYSQL_USERNAME || MYSQL_USERNAME='root';
 
     	echo -n "Please enter MySql Password : ";
     	read MYSQL_PASSWORD;
@@ -57,13 +57,17 @@ set_install() {
     	echo -n "Please enter MySql Database : ";
     	read MYSQL_DATABASE;
 
-    	echo -n "Please enter MySql Port : ";
-    	read MYSQL_PORT;
+    	echo -n "Please enter MySql Port (3306): ";
+    	read MYSQL_PORT || MYSQL_PORT='3306'
 
-    	echo "Mysql Host:  $MYSQL_HOST";
-    	echo "Mysql Username: $MYSQL_USERNAME";
-    	echo "Mysql Password: $MYSQL_PASSWORD";
-    	echo "Mysql Port: $MYSQL_PORT";
+    	until mysql -u ${MYSQL_USERNAME:="root"} -p${MYSQL_PASSWORD}  -e ";" ; do
+             read -p "Can't connect, please retry: " ${MYSQL_PASSWORD}
+        done
+
+    	echo "Mysql Host:  ${MYSQL_HOST:="localhost"}";
+    	echo "Mysql Username: ${MYSQL_USERNAME:="root"}";
+    	echo "Mysql Password: ${MYSQL_PASSWORD}";
+    	echo "Mysql Port: ${MYSQL_PORT:="3306"}";
     	echo -n "Is this correct? (y,n) : ";
     	read yesno;
     }
@@ -95,7 +99,7 @@ MAILER_URL=null://localhost
 # Format described at http://docs.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/configuration.html#connecting-using-a-url
 # For an SQLite database, use: "sqlite:///%kernel.project_dir%/var/data.db"
 # Configure your db driver and server_version in config/packages/doctrine.yaml
-DATABASE_URL=mysql://${MYSQL_USERNAME}:${MYSQL_PASSWORD}@${MYSQL_HOST}:${MYSQL_PORT}/${MYSQL_DATABASE}
+DATABASE_URL=mysql://${MYSQL_USERNAME:="root"}:${MYSQL_PASSWORD}@${MYSQL_HOST:="localhost"}:${MYSQL_PORT:="3306"}/${MYSQL_DATABASE}
 ###< doctrine/doctrine-bundle ###
 EOF
 
@@ -118,6 +122,27 @@ run_composerinstall() {
      mv FormatterMediaExtension.php vendor/sonata-project/media-bundle/src/Twig/Extension/FormatterMediaExtension.php
      echo "====== START COMPOSER AFTER ERROR ======"
      php composer install
+     php bin/console doctrine:schema:update --force
+     run_mysqlQuery
+     echo "====== URUCHAMIAM KONFIGURACJE KONCOWĄ ======"
+     bin/console fos:user:create --super-admin
+     echo "====== KONFIGURACJA STRONY ======"
+     php bin/console sonata:page:create-site
+     php bin/console sonata:page:update-core-routes --site=1
+     php bin/console sonata:page:create-snapshots --site=1
+}
+
+run_mysqlQuery() {
+   chmod 777 bin/console
+   mysql -u${MYSQL_USERNAME:="root"} -p${MYSQL_PASSWORD} -D ${MYSQL_DATABASE} -e "INSERT INTO \`settings\` (\`id\`, \`name\`, \`var\`, \`active\`, \`version\`) VALUES
+(1, 'theme', 'default', 'yes', 2),
+(2, 'analitics', 'SET', 'yes', 1),
+(3, 'facebook_client', 'SET', 'yes', 1),
+(4, 'facebook_id', 'SET', 'yes', 1),
+(5, 'google_id', 'SET', 'yes', 1),
+(6, 'google_secret', 'SET', 'yes', 1),
+(7, 'github_id', 'SET', 'yes', 1),
+(8, 'github_secret', 'SET', 'yes', 1);";
 }
 
 check_isInstalled() {
